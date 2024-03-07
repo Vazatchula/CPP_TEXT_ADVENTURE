@@ -1,7 +1,8 @@
 #include "PLAYER.h"
 #include "String.h"
-#include "String.cpp"
+
 #include <iostream>
+#define _CRT_SECURE_NO_WARNINGS
 using namespace std;
 
 player::player(int HP, int ATTK, int MN)
@@ -10,7 +11,7 @@ player::player(int HP, int ATTK, int MN)
 	int health = HP;
 	int attack = ATTK;
 	int mana = MN;
-	int x = 0; int y = 0;
+	xPosition = 0; yPosition = 0;
 	cout << "HEALTH: " << health << endl;
 	cout << "ATTACK: " << attack << endl;
 	cout << "MANA: " << mana << endl;
@@ -18,17 +19,36 @@ player::player(int HP, int ATTK, int MN)
 
 player::~player()
 {
-	delete
+	
 }
 
 void player::move(const String& direction)
 {
-	string command;
-	command.ReadFromConsole(); // waits for input from console.
+	const char* movement = direction.CStr();
 
-	if (command.ToLower().Equals("move south") == true)
-	{
-		// TODO: Process Move South Command
+	if (strcmp(movement, "up") == 0) {
+		yPosition++;
+		//cout << yPosition;
+		cout << "You move up to the next room" << endl;
+		return;
+	} 
+	else if (strcmp(movement, "down") == 0) {
+		yPosition--;
+		//cout << yPosition;
+		cout << "You move down to the next room" << endl;
+		return;
+	}
+	else if (strcmp(movement, "left") == 0) {
+		xPosition--;
+		//cout << xPosition;
+		cout << "You move left to the next room" << endl;
+		return;
+	}
+	else if (strcmp(movement, "right") == 0) {
+		xPosition++;
+		//cout << xPosition;
+		cout << "You move right to the next room" << endl;
+		return;
 	}
 }
 

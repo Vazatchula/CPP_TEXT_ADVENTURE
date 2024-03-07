@@ -1,8 +1,9 @@
 #pragma once
+#define _CRT_SECURE_NO_WARNINGS
 #include "String.h"
 class map{
 public:
-	map(int size1, int size2);
+	map();
 
 	~map();
 };

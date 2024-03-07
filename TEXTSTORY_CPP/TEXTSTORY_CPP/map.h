@@ -6,5 +6,8 @@ public:
 	map();
 
 	~map();
+
+private:
+	char* newMap[5][5];
 };
 

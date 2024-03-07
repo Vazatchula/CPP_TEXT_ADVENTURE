@@ -11,12 +11,16 @@ public:
 	~player();
 
 	void move(const String& direction);
-	void damage(String& dmg);
-	bool alive();
+	void damage(const int& dmg);
+	
 
 private:
 	int xPosition;
 	int yPosition;
+	int health;
+	int attack;
+	int mana;
+	bool playerAlive;
 
 
 };

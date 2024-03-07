@@ -4,14 +4,16 @@
 #include <iostream>
 #define _CRT_SECURE_NO_WARNINGS
 using namespace std;
+extern bool gameRunning;
 
 player::player(int HP, int ATTK, int MN)
 {
 	cout << "+++ player constructor +++" << endl;
-	int health = HP;
-	int attack = ATTK;
-	int mana = MN;
+	health = HP;
+	attack = ATTK;
+	mana = MN;
 	xPosition = 0; yPosition = 0;
+	playerAlive = true;
 	cout << "HEALTH: " << health << endl;
 	cout << "ATTACK: " << attack << endl;
 	cout << "MANA: " << mana << endl;
@@ -31,7 +33,7 @@ void player::move(const String& direction)
 		//cout << yPosition;
 		cout << "You move up to the next room" << endl;
 		return;
-	} 
+	}
 	else if (strcmp(movement, "down") == 0) {
 		yPosition--;
 		//cout << yPosition;
@@ -50,14 +52,27 @@ void player::move(const String& direction)
 		cout << "You move right to the next room" << endl;
 		return;
 	}
+	else if (strcmp(movement, "stay") == 0) {
+		//cout << xPosition;
+		cout << "You decide to wait in this room" << endl;
+		return;
+	}
+	else cout << "INVALID OPTION" << endl;
 }
 
-void player::damage(String& dmg)
+void player::damage(const int& dmg)
 {
+	int damage = dmg;
+	health -= damage;
+	cout << "PLAYER HEALTH: " << health << endl;
+	
+	if ((health == 0) || (health < 0)) {
+		playerAlive = false;
+		cout << "YOU HAVE DIED." << endl;
+		gameRunning = false;
+	}
+	return;
 
 }
 
-bool player::alive()
-{
-	return false;
-}
+

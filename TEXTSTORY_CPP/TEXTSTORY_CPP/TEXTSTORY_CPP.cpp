@@ -11,14 +11,19 @@ bool gameRunning = true;
 
 int main()
 {
-    map* MAP = new map();
-    player* TESTPLAYER = new player(100, 20, 10);
     char* input;
     input = new char[12];
+    
+    cout << "What should I call you?" << endl;
+    cin >> input;
+
+    map* MAP = new map();
+    player* TESTPLAYER = new player(input, 100, 20, 10);
     // String* location = new String(input);
     
 
     while (gameRunning) {
+        cout << "Which direction will you go?\n'up', 'down', 'left', 'right'" << endl;
         cin >> input;
         TESTPLAYER->move(input);
         TESTPLAYER->damage(20);

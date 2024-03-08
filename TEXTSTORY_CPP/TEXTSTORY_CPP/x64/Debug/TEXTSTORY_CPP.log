@@ -1,2 +1,6 @@
 ﻿  PLAYER.cpp
-  TEXTSTORY_CPP.vcxproj -> C:\Users\S240090\OneDrive - The Academy of Interactive Entertainment Ltd\Documents\CPP_TEXT_ADVENTURE\TEXTSTORY_CPP\x64\Debug\TEXTSTORY_CPP.exe
+  TEXTSTORY_CPP.cpp
+  map.cpp
+C:\Users\S240090\OneDrive - The Academy of Interactive Entertainment Ltd\Documents\CPP_TEXT_ADVENTURE\TEXTSTORY_CPP\TEXTSTORY_CPP\map.cpp(10,1): error C2512: 'player': no appropriate default constructor available
+C:\Users\S240090\OneDrive - The Academy of Interactive Entertainment Ltd\Documents\CPP_TEXT_ADVENTURE\TEXTSTORY_CPP\TEXTSTORY_CPP\PLAYER.h(6,7): message : see declaration of 'player'
+  Generating Code...

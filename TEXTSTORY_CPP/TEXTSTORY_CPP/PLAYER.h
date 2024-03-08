@@ -6,22 +6,25 @@
 class player{
 
 public:
-	player(int HP, int ATTK, int MN);
+	player(const char* NAME, int HP, int ATTK, int MN);
 
 	~player();
 
 	void move(const String& direction);
 	void damage(const int& dmg);
-	
-
-private:
+	char* name;
+protected:
 	int xPosition;
 	int yPosition;
+
+private:
+	
 	int health;
 	int attack;
 	int mana;
 	bool playerAlive;
-
+	
+	//char* playerName;
 
 };
 

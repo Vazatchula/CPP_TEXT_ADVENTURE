@@ -2,9 +2,9 @@
 #include "String.h"
 #include <string>
 #include <iostream>
-#include "PLAYER.h"
 using namespace std;
 #define _CRT_SECURE_NO_WARNINGS
+bool noWall = true;
 
 map::map()
 {
@@ -15,14 +15,34 @@ map::~map()
 {
 }
 
-void map::mapcheck(const int x, const int y) {
+bool map::mapcheck(int position) {
 
-	if (xPosition > 3) {
-		cout << name << ": You try your best, but you can't seem to find a way to go any further" << endl;
-		xPosition = 3;
+	cout << "---MAPCHECK---" << endl;
+	//cout << "Position is: x " << x << ", y " << y << endl;
+
+	mapGlobalPos = position;
+	
+
+
+
+	/*if ((mapX >= 3) && (mapY != 5)) {
+		cout << "MAX X MOVEMENT 3: " << mapX << endl;
+		mapY == 4;
+		return false;
+	} else if ((mapY >= 5) && (mapX != 3)) {
+		cout << "MAX Y MOVEMENT 5: " << mapY << endl;
+		mapY == 4;
+		return false;
+	} else if ((mapX >= 3) && (mapY >= 5)) {
+		cout << "MAX X AND Y MOVEMENT REACHED. GO BACK. " << mapX << endl;
+		mapX == 2;
+		mapY == 4;
+		return false;
 	}
-	if (yPosition > 5) {
-		cout << name << ": You try your best, but you can't seem to find a way to go any further" << endl;
-		xPosition = 5;
-	}
+	*/
+	else return true;
+
+	
+	
+	
 }

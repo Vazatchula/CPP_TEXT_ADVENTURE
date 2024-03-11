@@ -9,24 +9,24 @@
 using namespace std;
 bool gameRunning = true;
 
-int main()
-{
+int main(){
     char* input;
     input = new char[12];
     
     cout << "What should I call you?" << endl;
     cin >> input;
 
-    map* MAP = new map();
+    //map* MAP = new map();
     player* TESTPLAYER = new player(input, 100, 20, 10);
     // String* location = new String(input);
     
 
     while (gameRunning) {
         cout << "Which direction will you go?\n'up', 'down', 'left', 'right'" << endl;
+        cout << "Or: 'stay'" << endl;
         cin >> input;
         TESTPLAYER->move(input);
-        TESTPLAYER->damage(20);
+        //TESTPLAYER->damage(20);
         
 
         

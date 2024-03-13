@@ -12,11 +12,13 @@ public:
 	int mapY = 0;
 	int mapGlobalPos = 0;
 
-	bool mapcheck(int position);
+	void mapcheck(int pxosition, int yposition);
+	void roomDescription(int xpos, int ypos);
+		
+	bool xLimit;
+	bool yLimit;
 		
 	
-		
-
 	
 
 private:

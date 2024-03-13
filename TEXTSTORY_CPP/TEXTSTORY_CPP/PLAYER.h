@@ -13,6 +13,7 @@ public:
 
 	void move(const String& direction);
 	void damage(const int& dmg);
+	void inventory();
 	char* name;
 protected:
 	int xPosition = 0;

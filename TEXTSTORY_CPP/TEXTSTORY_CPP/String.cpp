@@ -56,7 +56,7 @@ char& String::CharacterAt(size_t index)
 {
 	cout << "\n--- character at? function ---" << endl;
 	cout << "letter " << index << " of " << strNew << " is the character: ";
-	//cout << strlen(strNew) << endl;
+	
 
 	if (strlen(strNew) <= 0) cout << "NO STRING INPUT";
 
@@ -84,7 +84,6 @@ bool String::EqualTo(const String& other) // equality FUNCTION, different to the
 String& String::Append(const String& _str)
 {
 	cout << "\n--- append? function ---" << endl;
-	//strcpy(strNew, _str.strNew);
 	strcat(strNew, " ");
 	strcat(strNew, _str.strNew);
 	cout << strNew << endl;

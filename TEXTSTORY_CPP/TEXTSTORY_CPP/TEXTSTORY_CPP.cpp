@@ -12,9 +12,52 @@ bool gameRunning = true;
 int main(){
     char* input;
     input = new char[12];
+
+    cout << R"( 
+               
+  
+              ___.                         __                 
+  _____ ______\_ |__   ___________   _____/  |_ __ __  _____  
+  \__  \\_  __ \ __ \ /  _ \_  __ \_/ __ \   __\  |  \/     \ 
+   / __ \|  | \/ \_\ (  <_> )  | \/\  ___/|  | |  |  /  Y Y  \
+  (____  /__|  |___  /\____/|__|    \___  >__| |____/|__|_|  /
+       \/          \/                   \/                 \/ 
+  
+ 
+)";
+
     
     cout << "What should I call you?" << endl;
-    cin >> input;
+    cout << ">> "; cin >> input; cout << "\n \n";
+
+    cout << R"(
+   
+                    WELCOME TO THE GARDEN.
+
+            ,,,                      ,,,
+           {{{}}    ,,,             {{{}}    ,,,
+        ,,, ~Y~    {{{}},,,      ,,, ~Y~    {{{}},,, 
+       {{}}} |/,,,  ~Y~{{}}}    {{}}} |/,,,  ~Y~{{}}}
+        ~Y~ \|{{}}}/\|/ ~Y~  ,,, ~Y~ \|{{}}}/\|/ ~Y~  ,,,
+        \|/ \|/~Y~  \|,,,|/ {{}}}\|/ \|/~Y~  \|,,,|/ {{}}}
+        \|/ \|/\|/  \{{{}}/  ~Y~ \|/ \|/\|/  \{{{}}/  ~Y~
+        \|/\\|/\|/ \\|~Y~//  \|/ \|/\\|/\|/ \\|~Y~//  \|/
+        \|//\|/\|/,\\|/|/|// \|/ \|//\|/\|/,\\|/|/|// \|/
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+)";
+
+    cout << R"(
+Cool description here. Really cool. Description very cool description
+very cool description. Description.
+
+Cool description here. Really cool. Description very cool description
+very cool description. Description. Cool description here. Really cool.
+Description very cool description very cool description. Description. 
+Cool description here. Really cool. Description very cool description
+very cool description. Description. Cool description here. Really cool. 
+Description very cool description very cool description. Description.
+
+)";
 
     //map* MAP = new map();
     player* TESTPLAYER = new player(input, 100, 20, 10);
@@ -22,10 +65,19 @@ int main(){
     
 
     while (gameRunning) {
+        cout << R"(
+//-- "menu" to open the menu --\\
+
+)";
         cout << "Which direction will you go?\n'up', 'down', 'left', 'right'" << endl;
         cout << "Or: 'stay'" << endl;
-        cin >> input;
-        TESTPLAYER->move(input);
+        cout << ">> "; cin >> input;
+        cout << "\n";
+        if (strcmp(input, "menu") == 0) {
+
+            TESTPLAYER->inventory();
+
+        } else TESTPLAYER->move(input);
         //TESTPLAYER->damage(20);
         
 

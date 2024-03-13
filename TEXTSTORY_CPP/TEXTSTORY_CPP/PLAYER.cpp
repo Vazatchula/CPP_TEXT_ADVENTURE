@@ -14,7 +14,7 @@ player::player(const char* NAME, int HP, int ATTK, int MN)
 	strcat(name, NAME);
 
 	//name = NAME.CStr();
-	cout << "+++ player constructor: " << name << " +++" << endl;
+	//cout << "+++ player constructor: " << name << " +++" << endl;
 	health = HP;
 	attack = ATTK;
 	mana = MN;
@@ -36,73 +36,97 @@ player::~player()
 void player::move(const String& direction)
 {
 	const char* movement = direction.CStr();
+	
 
-	if (mapcheck(mapX, mapY) == true) {
+	
 		if (strcmp(movement, "up") == 0) {
-			mapY++;
-			//cout << yPosition;
-			cout << name << ": You move up to the next room" << endl;
+			if (yLimit == true) cout << "You cant move any further\n" << endl;
+			else {
+				mapY++;
+				cout << ">> " << name << ": You move up to the next room\n" << endl;
+			}
+			roomDescription(mapX, mapY);
 			mapcheck(mapX, mapY);
-			//cout << &mapcheck;
+			
 			return;
 		}
 		else if (strcmp(movement, "right") == 0) {
-			mapX++;
+			if (xLimit == true) cout << "You cant move any further\n" << endl;
+			else {
+				mapX++;
+				cout << ">> " << name << ": You move right to the next room\n" << endl;
+			}
+			roomDescription(mapX, mapY);
 			mapcheck(mapX, mapY);
-			//cout << xPosition;
-			cout << name << ": You move right to the next room" << endl;
-			//cout << &mapcheck;
+			
 			return;
 		}
 		else if (strcmp(movement, "down") == 0) {
 			mapY--;
-			//cout << yPosition;
-			cout << name << ": You move down to the next room" << endl;
+			if (mapY < 0) {
+				mapY = 0;
+				cout << "You cant move any further\n" << endl;
+			}
+			else cout << ">> " << name << ": You move down to the next room\n" << endl;
+			roomDescription(mapX, mapY);
 			mapcheck(mapX, mapY);
-			//cout << &mapcheck;
+			
 			return;
 		}
 		else if (strcmp(movement, "left") == 0) {
 			mapX--;
-			//cout << xPosition;
-			cout << name << ": You move left to the next room" << endl;
+			if (mapX < 0) {
+				mapX = 0;
+				cout << "You cant move any further\n" << endl;
+			}
+			else cout << ">> " << name << ": You move left to the next room\n" << endl;
+			roomDescription(mapX, mapY);
 			mapcheck(mapX, mapY);
-			//cout << &mapcheck;
+			
 			return;
 		}
-	}
-	else if (mapcheck(mapX, mapY) == false) {
+	
 		if (strcmp(movement, "down") == 0) {
 			mapY--;
-			//cout << yPosition;
-			cout << name << ": You move down to the next room" << endl;
+			if (mapY < 0) {
+				mapY = 0;
+				cout << "You cant move any further\n" << endl;
+			}
+			else cout << ">> " << name << ": You move left to the next room\n" << endl;
+			roomDescription(mapX, mapY);
 			mapcheck(mapX, mapY);
-			//cout << &mapcheck;
+			
 			return;
 		}
 		else if (strcmp(movement, "left") == 0) {
 			mapX--;
+			if (mapX < 0) {
+				mapX = 0;
+				cout << "You cant move any further\n" << endl;
+			}
+			else cout << ">> " << name << ": You move left to the next room\n" << endl;
 			//cout << xPosition;
-			cout << name << ": You move left to the next room" << endl;
+			roomDescription(mapX, mapY);
 			mapcheck(mapX, mapY);
 			//cout << &mapcheck;
 			return;
 		}
-	}
+	
 	else if (strcmp(movement, "stay") == 0) {
 		//cout << xPosition;
-		cout << name << ": You decide to wait in this room" << endl;
+		cout << ">> " << name << ": You decide to wait in this room\n" << endl;
+		roomDescription(mapX, mapY);
 		mapcheck(mapX, mapY);
 		//cout << &mapcheck;
 				return;
 	}
 	else {
 		cout << "INVALID OPTION. OPTIONS ARE:" << endl;
-		cout << "'up', 'down', 'left', 'right', 'stay'" << endl;
+		cout << "'up', 'down', 'left', 'right', 'stay'\n" << endl;
 		//cout << mapcheck;
 	}
 
-
+	
 
 }
 
@@ -120,6 +144,73 @@ void player::damage(const int& dmg)
 	}
 	return;
 
+}
+
+void player::inventory()
+{
+	cout << "-- INVENTORY --" << endl;
+	bool inventoryOpen = true;
+	char input[12];
+
+	while (inventoryOpen == true) {
+
+		cout << "1. cat\n2. toast\n3. empty" << endl;
+		cout << ">> "; cin >> input;
+		if ((strcmp(input, "cat") == 0 ) || (strcmp(input, "1") == 0)) {
+			cout << R"(
+meow meow meow meow meow meow meow meow meow meow meow meow meow 
+meow meow meow meow meow meow meow meow meow meow meow meow meow 
+meow meow meow meow meow meow meow meow meow meow meow meow meow 
+meow meow meow meow meow meow meow meow meow meow meow meow meow 
+meow meow meow meow meow meow meow meow meow meow meow meow meow 
+                                     -__________-  
+                                               \   |\__/,|   (`\ 
+                                                ^_.|o o  |_   ) ) 
+                                                -(((---(((--------
+
+>> what the fuck.
+)";
+			return;
+		}
+		else if ((strcmp(input, "toast") == 0) || (strcmp(input, "2") == 0)) {
+			cout << R"(
+
+
+                                                                  
+                                       ==                         
+                  =:.   .      #=:  =   .%%#*%*+**#**             
+             ...  .-::   :          *%*  #=*::*%#%%*%%%*%**       
+            *                      =%%+ =*%*==*#%%+##*%%%#%#      
+            -                      %%%* -*%==+#%=*##*#%%%%%%      
+                                  -%%%=*%%*=.*****=*%#*%#%#%      
+           :                      %*#*:#%*=:--#=%+##=#***###      
+             .                   .*#%=+**% .+**=**-*++=*#***      
+          + .                    ##%+=*=+%:.=***+#*++****#*#      
+                                .%%%===*++::=*:*==+*+=+*****      
+         :                      +%**=-==*-=.=+%++++*+*+*##*       
+        +                      .%*%*:==**=:::-+%+#*#=#**#*#       
+        .                      :***+.=**#+-::*%#%####=*%%**       
+       :                       **%*-:***%+==:*%#%%+#%#**%#%       
+       =:==*==+-===::.    .   .***%=-=+***+=:*#%%%%*#****%%       
+         %@%@@%%%%%%%%%%%#*%*****@%%*#***#****##%%%%%%%%%@========
+                           =@@##%@@@@%**+========                
+                                                                  
+                                                                  
+>> Its cold. Darn
+)";
+			return;
+		}
+		else if ((strcmp(input, "empty") == 0) || (strcmp(input, "3") == 0)) {
+			cout << "EMPTY" << endl;
+			return;
+		}
+		else if ((strcmp(input, "back") == 0)) {
+			inventoryOpen = false;
+			return;
+		}
+		else cout << "NO ITEM FOUND. PLEASE TRY AGAIN." << endl;
+
+	}
 }
 
 

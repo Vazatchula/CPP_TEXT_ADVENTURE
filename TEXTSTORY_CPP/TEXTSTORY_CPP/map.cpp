@@ -15,34 +15,46 @@ map::~map()
 {
 }
 
-bool map::mapcheck(int position) {
+void map::mapcheck(int xposition, int yposition) {
 
 	cout << "---MAPCHECK---" << endl;
-	//cout << "Position is: x " << x << ", y " << y << endl;
+	cout << "Position is: x " << xposition << ", y " << yposition << endl;
 
-	mapGlobalPos = position;
+	mapX = xposition;
+	mapY = yposition;
 	
+	xLimit = false;
+	yLimit = false;
 
-
-
-	/*if ((mapX >= 3) && (mapY != 5)) {
+	if ((mapX >= 3) && (mapY != 5)) {
 		cout << "MAX X MOVEMENT 3: " << mapX << endl;
 		mapY == 4;
-		return false;
+		if ((mapX >= 3) && (mapY != 5)) xLimit = true;
+		
 	} else if ((mapY >= 5) && (mapX != 3)) {
 		cout << "MAX Y MOVEMENT 5: " << mapY << endl;
 		mapY == 4;
-		return false;
-	} else if ((mapX >= 3) && (mapY >= 5)) {
-		cout << "MAX X AND Y MOVEMENT REACHED. GO BACK. " << mapX << endl;
-		mapX == 2;
-		mapY == 4;
-		return false;
-	}
-	*/
-	else return true;
+		if ((mapY >= 5) && (mapX != 3)) yLimit = true;
+
+	}else if ((mapY >= 5) && (mapX >= 3)) {
+
+		cout << "MAX X MOVEMENT 3: " << mapX << endl;
+		cout << "MAX Y MOVEMENT 5: " << mapY << endl;
+		xLimit = true;
+		yLimit = true;
+
+	} return;
+
+	cout << "\n";
+
+	return;
 
 	
 	
 	
+}
+
+void map::roomDescription(int xpos, int ypos) {
+
+	cout << "COOL ROOM DESCRIPTION. COOL ROOM DESCRIPTION. COOL ROOM DESCRIPTION.\n\n" << endl;
 }

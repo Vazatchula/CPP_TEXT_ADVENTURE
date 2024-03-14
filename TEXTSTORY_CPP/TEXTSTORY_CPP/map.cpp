@@ -56,5 +56,10 @@ void map::mapcheck(int xposition, int yposition) {
 
 void map::roomDescription(int xpos, int ypos) {
 
+	char* input;
+	input = new char[12];
+
 	cout << "COOL ROOM DESCRIPTION. COOL ROOM DESCRIPTION. COOL ROOM DESCRIPTION.\n\n" << endl;
+	cout << "Press any key to continue" << endl;
+	cout << ">> "; cin >> input;
 }

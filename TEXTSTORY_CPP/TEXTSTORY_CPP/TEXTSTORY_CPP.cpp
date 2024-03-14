@@ -8,6 +8,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 using namespace std;
 bool gameRunning = true;
+bool inventoryOpen = true;
 
 int main(){
     char* input;
@@ -66,16 +67,21 @@ Description very cool description very cool description. Description.
 
     while (gameRunning) {
         cout << R"(
-//-- "menu" to open the menu --\\
+       //-- "menu" to open the menu --\\
 
+//-- MOVEMENT: "up", "down", "left", "right" --\\
 )";
-        cout << "Which direction will you go?\n'up', 'down', 'left', 'right'" << endl;
-        cout << "Or: 'stay'" << endl;
+     
         cout << ">> "; cin >> input;
         cout << "\n";
-        if (strcmp(input, "menu") == 0) {
 
-            TESTPLAYER->inventory();
+        if (strcmp(input, "menu") == 0) {
+            inventoryOpen = true;
+
+            while (inventoryOpen) {
+                TESTPLAYER->inventory();
+            }
+            
 
         } else TESTPLAYER->move(input);
         //TESTPLAYER->damage(20);

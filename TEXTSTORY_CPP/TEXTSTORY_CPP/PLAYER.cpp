@@ -5,6 +5,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 using namespace std;
 extern bool gameRunning;
+extern bool inventoryOpen;
 
 
 player::player(const char* NAME, int HP, int ATTK, int MN)
@@ -40,7 +41,10 @@ void player::move(const String& direction)
 
 	
 		if (strcmp(movement, "up") == 0) {
-			if (yLimit == true) cout << "You cant move any further\n" << endl;
+			if (yLimit == true) {
+				cout << "You cant move any further\n" << endl;
+				return;
+			}
 			else {
 				mapY++;
 				cout << ">> " << name << ": You move up to the next room\n" << endl;
@@ -51,7 +55,10 @@ void player::move(const String& direction)
 			return;
 		}
 		else if (strcmp(movement, "right") == 0) {
-			if (xLimit == true) cout << "You cant move any further\n" << endl;
+			if (xLimit == true) {
+				cout << "You cant move any further\n" << endl;
+				return;
+			}
 			else {
 				mapX++;
 				cout << ">> " << name << ": You move right to the next room\n" << endl;
@@ -66,6 +73,7 @@ void player::move(const String& direction)
 			if (mapY < 0) {
 				mapY = 0;
 				cout << "You cant move any further\n" << endl;
+				return;
 			}
 			else cout << ">> " << name << ": You move down to the next room\n" << endl;
 			roomDescription(mapX, mapY);
@@ -78,6 +86,7 @@ void player::move(const String& direction)
 			if (mapX < 0) {
 				mapX = 0;
 				cout << "You cant move any further\n" << endl;
+				return;
 			}
 			else cout << ">> " << name << ": You move left to the next room\n" << endl;
 			roomDescription(mapX, mapY);
@@ -91,6 +100,7 @@ void player::move(const String& direction)
 			if (mapY < 0) {
 				mapY = 0;
 				cout << "You cant move any further\n" << endl;
+				return;
 			}
 			else cout << ">> " << name << ": You move left to the next room\n" << endl;
 			roomDescription(mapX, mapY);
@@ -103,6 +113,7 @@ void player::move(const String& direction)
 			if (mapX < 0) {
 				mapX = 0;
 				cout << "You cant move any further\n" << endl;
+				return;
 			}
 			else cout << ">> " << name << ": You move left to the next room\n" << endl;
 			//cout << xPosition;
@@ -115,7 +126,7 @@ void player::move(const String& direction)
 	else if (strcmp(movement, "stay") == 0) {
 		//cout << xPosition;
 		cout << ">> " << name << ": You decide to wait in this room\n" << endl;
-		roomDescription(mapX, mapY);
+		//roomDescription(mapX, mapY);
 		mapcheck(mapX, mapY);
 		//cout << &mapcheck;
 				return;
@@ -149,10 +160,9 @@ void player::damage(const int& dmg)
 void player::inventory()
 {
 	cout << "-- INVENTORY --" << endl;
-	bool inventoryOpen = true;
 	char input[12];
 
-	while (inventoryOpen == true) {
+	
 
 		cout << "1. cat\n2. toast\n3. empty" << endl;
 		cout << ">> "; cin >> input;
@@ -196,7 +206,7 @@ meow meow meow meow meow meow meow meow meow meow meow meow meow
                            =@@##%@@@@%**+========                
                                                                   
                                                                   
->> Its cold. Darn
+>> It's cold. Darn
 )";
 			return;
 		}
@@ -210,7 +220,7 @@ meow meow meow meow meow meow meow meow meow meow meow meow meow
 		}
 		else cout << "NO ITEM FOUND. PLEASE TRY AGAIN." << endl;
 
-	}
+	
 }
 
 

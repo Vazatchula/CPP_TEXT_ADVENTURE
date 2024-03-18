@@ -14,6 +14,14 @@ public:
 
 	void mapcheck(int pxosition, int yposition);
 	void roomDescription(int xpos, int ypos);
+	void enemyPLAYER();
+	
+	void sRoom_1();
+	void sRoom_2();
+	void sRoom_3();
+	void sRoom_4();
+	void sRoom_5();
+
 		
 	bool xLimit;
 	bool yLimit;

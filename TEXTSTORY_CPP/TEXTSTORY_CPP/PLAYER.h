@@ -15,6 +15,11 @@ public:
 	void damage(const int& dmg);
 	void inventory();
 	char* name;
+	void healthCheck();
+
+	void enemyRATS();
+
+
 protected:
 	int xPosition = 0;
 	int yPosition = 0;

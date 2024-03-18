@@ -7,8 +7,10 @@
 #include "PLAYER.h"
 #define _CRT_SECURE_NO_WARNINGS
 using namespace std;
-bool gameRunning = true;
+extern bool gameRunning;
 bool inventoryOpen = true;
+extern bool ratfight;
+extern bool playerAlive;
 
 int main(){
     char* input;
@@ -65,15 +67,24 @@ Description very cool description very cool description. Description.
     // String* location = new String(input);
     
 
-    while (gameRunning) {
+    while (gameRunning == true) {
+
+       
+        TESTPLAYER->healthCheck();
         cout << R"(
        //-- "menu" to open the menu --\\
 
 //-- MOVEMENT: "up", "down", "left", "right" --\\
 )";
      
+       
         cout << ">> "; cin >> input;
         cout << "\n";
+
+        if (strcmp(input, "q") == 0) {
+            gameRunning = false;
+            break;
+        }
 
         if (strcmp(input, "menu") == 0) {
             inventoryOpen = true;
@@ -85,7 +96,7 @@ Description very cool description very cool description. Description.
 
         } else TESTPLAYER->move(input);
         //TESTPLAYER->damage(20);
-        
+        if (ratfight == true) TESTPLAYER->enemyRATS();
 
         
 

@@ -3,8 +3,10 @@
 #include <string>
 #include "String.h"
 #include "map.h"
+#include "item.h"
 
-class player : public map{
+
+class player : public item {
 
 public:
 	player(const char* NAME, int HP, int ATTK, int MN);
@@ -16,8 +18,11 @@ public:
 	void inventory();
 	char* name;
 	void healthCheck();
+	void playerheal(int amount);
 
 	void enemyRATS();
+
+
 
 
 protected:

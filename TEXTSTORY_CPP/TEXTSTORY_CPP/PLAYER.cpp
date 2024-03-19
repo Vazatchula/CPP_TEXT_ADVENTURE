@@ -1,12 +1,16 @@
 #include "PLAYER.h"
-#include "String.h"
-#include "map.h"
+
+
 #include <iostream>
+
 #define _CRT_SECURE_NO_WARNINGS
+
+
 using namespace std;
 bool gameRunning;
 extern bool inventoryOpen;
 void enemy(const char* enemy);
+void healing(int amount);
 bool ratfight;
 bool playerAlive;
 
@@ -177,50 +181,23 @@ void player::inventory()
 
 	
 
-		cout << "1. cat\n2. toast\n3. empty" << endl;
-		cout << ">> "; cin >> input;
-		if ((strcmp(input, "cat") == 0 ) || (strcmp(input, "1") == 0)) {
-			cout << R"(
-meow meow meow meow meow meow meow meow meow meow meow meow meow 
-meow meow meow meow meow meow meow meow meow meow meow meow meow 
-meow meow meow meow meow meow meow meow meow meow meow meow meow 
-meow meow meow meow meow meow meow meow meow meow meow meow meow 
-meow meow meow meow meow meow meow meow meow meow meow meow meow 
-                                     -__________-  
-                                               \   |\__/,|   (`\ 
-                                                ^_.|o o  |_   ) ) 
-                                                -(((---(((--------
+	cout << "1. "; 
+	if (key == true) cout << "SILVER KEY. "; else cout << "EMPTY. ";
+	cout << "2. ";
+	if (toast == true) cout << "TOAST. "; else cout << "EMPTY. ";
+	cout << "3. ";
+	if (donuts == true) cout << "DONUTS[?]. "; else cout << "EMPTY. ";
 
->> what the fuck.
-)";
+
+		cout << ">> "; cin >> input;
+		if (strcmp(input, "1") == 0) {
+
+			inventoryKey();
+
 			return;
 		}
 		else if ((strcmp(input, "toast") == 0) || (strcmp(input, "2") == 0)) {
-			cout << R"(
 
-
-                                                                  
-                                       ==                         
-                  =:.   .      #=:  =   .%%#*%*+**#**             
-             ...  .-::   :          *%*  #=*::*%#%%*%%%*%**       
-            *                      =%%+ =*%*==*#%%+##*%%%#%#      
-            -                      %%%* -*%==+#%=*##*#%%%%%%      
-                                  -%%%=*%%*=.*****=*%#*%#%#%      
-           :                      %*#*:#%*=:--#=%+##=#***###      
-             .                   .*#%=+**% .+**=**-*++=*#***      
-          + .                    ##%+=*=+%:.=***+#*++****#*#      
-                                .%%%===*++::=*:*==+*+=+*****      
-         :                      +%**=-==*-=.=+%++++*+*+*##*       
-        +                      .%*%*:==**=:::-+%+#*#=#**#*#       
-        .                      :***+.=**#+-::*%#%####=*%%**       
-       :                       **%*-:***%+==:*%#%%+#%#**%#%       
-       =:==*==+-===::.    .   .***%=-=+***+=:*#%%%%*#****%%       
-         %@%@@%%%%%%%%%%%#*%*****@%%*#***#****##%%%%%%%%%@========
-                           =@@##%@@@@%**+========                
-                                                                  
-                                                                  
->> It's cold. Darn
-)";
 			return;
 		}
 		else if ((strcmp(input, "empty") == 0) || (strcmp(input, "3") == 0)) {
@@ -322,3 +299,10 @@ void enemy(const char* enemy)
 		return;
 	}
 }
+
+
+void player::playerheal(int amount) {
+	health + amount;
+}
+
+

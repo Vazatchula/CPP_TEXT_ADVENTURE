@@ -1,2 +1,5 @@
-﻿  TEXTSTORY_CPP.cpp
+﻿  item.cpp
+  PLAYER.cpp
+  TEXTSTORY_CPP.cpp
+  Generating Code...
   TEXTSTORY_CPP.vcxproj -> C:\Users\Fallon\Documents\GitHub\CPP_TEXT_ADVENTURE\TEXTSTORY_CPP\x64\Debug\TEXTSTORY_CPP.exe

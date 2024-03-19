@@ -5,6 +5,7 @@
 #include "String.h"
 #include "map.h"
 #include "PLAYER.h"
+#include "item.h"
 #define _CRT_SECURE_NO_WARNINGS
 using namespace std;
 extern bool gameRunning;

@@ -22,6 +22,13 @@ public:
 	void sRoom_4();
 	void sRoom_5();
 
+	bool key = false;
+	bool keyactivate = false;
+	bool toast = false;
+	bool toastactivate = false;
+	bool donuts = false;
+	bool donutsactivate = false;
+
 		
 	bool xLimit;
 	bool yLimit;

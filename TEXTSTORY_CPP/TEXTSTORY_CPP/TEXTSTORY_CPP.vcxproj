@@ -127,12 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="item.cpp" />
     <ClCompile Include="map.cpp" />
     <ClCompile Include="PLAYER.cpp" />
     <ClCompile Include="String.cpp" />
     <ClCompile Include="TEXTSTORY_CPP.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="item.h" />
     <ClInclude Include="map.h" />
     <ClInclude Include="PLAYER.h" />
     <ClInclude Include="String.h" />

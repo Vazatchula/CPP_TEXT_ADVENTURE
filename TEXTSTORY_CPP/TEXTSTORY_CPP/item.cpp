@@ -3,6 +3,7 @@
 #include <iostream>
 #include "PLAYER.h"
 using namespace std;
+int donutamount = 3;
 
 item::item()
 {
@@ -21,6 +22,8 @@ void item::inventoryKey()
 
 	if (key == true) {
 		cout << "A silver key. This should open a door somewhere.\n Maybe in the future that mechanic will be implimented." << endl;
+        cout << "Press any key to continue" << endl;
+        cout << ">> "; cin >> input;
 
         // add door mechanic here
 
@@ -59,6 +62,9 @@ void item::inventoryToast()
                                                                   
 >> It's cold. Darn
 )";
+        cout << "Press any key to continue" << endl;
+        cout << ">> "; cin >> input;
+
 	} else  cout << "EMPTY" << endl;
 
 }
@@ -67,14 +73,19 @@ void item::inventoryDonuts()
 {
     char* input;
     input = new char[12];
+    
 
     if (donuts == true) {
-        cout << "Donuts!! Eat to regain health? (y/n)" << endl;
-        cout << ">> "; cin >> input; cout << "\n \n";
+        if (donutamount <= 0) {
+            cout << "Donuts!! There are " << donutamount << " in the box!\nToo bad you ate them all." << endl;
+            cout << "Press any key to continue" << endl;
 
-        if (strcmp(input, "y") == 0) {
+        } else cout << "Donuts!! There are " << donutamount << " in the box!\nEat to regain health ? (y / n)" << endl;
+        
+
+      /*  if (strcmp(input, "y") == 0) {
             
-        }
+        }*/
 
 
     }

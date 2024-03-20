@@ -18,7 +18,7 @@ public:
 	void inventory();
 	char* name;
 	void healthCheck();
-	void playerheal(int amount);
+
 
 	void enemyRATS();
 

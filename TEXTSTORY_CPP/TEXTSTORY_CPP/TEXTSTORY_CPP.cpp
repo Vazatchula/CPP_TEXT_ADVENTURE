@@ -76,6 +76,9 @@ Description very cool description very cool description. Description.
        //-- "menu" to open the menu --\\
 
 //-- MOVEMENT: "up", "down", "left", "right" --\\
+
+x2 and y1 for ratfight
+x1 and y3 for silver key
 )";
      
        
@@ -87,7 +90,7 @@ Description very cool description very cool description. Description.
             break;
         }
 
-        if (strcmp(input, "menu") == 0) {
+        if ((strcmp(input, "menu") == 0) && (ratfight == false)) {
             inventoryOpen = true;
 
             while (inventoryOpen) {

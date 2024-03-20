@@ -10,9 +10,10 @@ using namespace std;
 bool gameRunning;
 extern bool inventoryOpen;
 void enemy(const char* enemy);
-void healing(int amount);
+
 bool ratfight;
 bool playerAlive;
+extern int donutamount;
 
 player::player(const char* NAME, int HP, int ATTK, int MN)
 {
@@ -35,7 +36,7 @@ player::player(const char* NAME, int HP, int ATTK, int MN)
 	if (health <= 0) gameRunning = false;
 	else gameRunning = true;
 	
-	
+	donuts = true;
 }
 
 
@@ -48,6 +49,7 @@ void player::healthCheck() {
 	cout << "HEALTH: " << health << endl;
 	cout << "ATTACK: " << attack << endl;
 	cout << "MANA: " << mana << endl;
+	if (health <= 0) gameRunning = false;
 }
 
 void player::move(const String& direction)
@@ -160,8 +162,10 @@ void player::move(const String& direction)
 void player::damage(const int& dmg)
 {
 	int damage = dmg;
+	if (damage < 0) cout << name << " gained health!" << endl;
+	else cout << name << " took damage!" << endl;
 	health -= damage;
-	cout << name << " took damage!" << endl;
+	
 	cout << "PLAYER HEALTH: " << health << endl;
 	
 	if (health <= 0) {
@@ -196,12 +200,19 @@ void player::inventory()
 
 			return;
 		}
-		else if ((strcmp(input, "toast") == 0) || (strcmp(input, "2") == 0)) {
+		else if (strcmp(input, "2") == 0) {
+
+			inventoryToast();
 
 			return;
 		}
-		else if ((strcmp(input, "empty") == 0) || (strcmp(input, "3") == 0)) {
-			cout << "EMPTY" << endl;
+		else if (strcmp(input, "3") == 0) {
+			inventoryDonuts();
+			cout << ">> "; cin >> input; cout << "\n \n";
+			if (strcmp(input, "y") == 0) {
+				damage(-20);
+				donutamount = donutamount - 1;
+			}
 			return;
 		}
 		else if ((strcmp(input, "back") == 0)) {
@@ -223,15 +234,27 @@ void player::enemyRATS()
 	char* input;
 	input = new char[12];
 
-	cout << "ENEMY HP: " << health << endl;
+
+	cout << "ENEMY HP: " << rathealth << endl;
+
 
 	while ((alive == true) || (player == true)) {
 		
+		if (health <= 0) {
+			cout << "The [CANCEROUS RAT] eats your corpse." << endl;
+
+			player = false;
+
+
+			break;
+		}
 
 		cout << ">> The [CANCEROUS RAT] bites you for 10 DAMAGE" << endl;
 		damage(10);
+		cout << "ENEMY HP: " << rathealth << endl;
 
-		cout << "What will you do?" << endl;
+		if (health > 0) {
+					cout << "What will you do?" << endl;
 		cout << R"(
           //-- "menu" to open the menu --\\
 
@@ -240,45 +263,45 @@ void player::enemyRATS()
 )";
 
 		cout << ">> "; cin >> input;
+		}
 
-		if (strcmp(input, "menu") == 0) {
+
+
+		if ((strcmp(input, "menu") == 0) && (ratfight == true) && (health > 0)) {
 			inventoryOpen = true;
 
 			while (inventoryOpen) {
 				inventory();
 			}
 
-			return;
+
 		}
-		if (strcmp(input, "punch") == 0) {
+		if ((strcmp(input, "punch") == 0) && (health > 0)) {
 			cout << ">> You punch the [CANCEROUS RAT] for 10 DAMAGE." << endl;
-			health -= 10;
-			cout << "ENEMY HP: " << health << endl;
+			rathealth = rathealth - 10;
+
+			
 		}
-		if (strcmp(input, "kick") == 0) {
+		if ((strcmp(input, "kick") == 0) && (health > 0)) {
 			cout << ">> You kick the [CANCEROUS RAT] for 30 DAMAGE." << endl;
-			health -= 30;
-			cout << "ENEMY HP: " << health << endl;
+			rathealth = rathealth - 30;
+			
 		}
-		if (strcmp(input, "taunt") == 0) {
+		if ((strcmp(input, "taunt") == 0) && (health > 0)) {
 			cout << ">> You taunt the [CANCEROUS RAT] for 5 DAMAGE." << endl;
 			cout << ">> The [CANCEROUS RAT] gets pissed. You take 5 DAMAGE from rat curses." << endl;
-			health -= 5;
-			cout << "ENEMY HP: " << health << endl;
+			rathealth = rathealth - 5;
+			
 			damage(5);
 		}
-		if (strcmp(input, "fireball") == 0) {
+		if ((strcmp(input, "fireball") == 0) && (health > 0)) {
 			cout << ">> You cast fireball on the [CANCEROUS RAT] for 60 DAMAGE." << endl;
 			cout << "You take 10 DAMAGE due to the explosion." << endl;
-			health -= 60;
-			cout << "ENEMY HP: " << health << endl;
+			rathealth = rathealth - 60;
+			
 			damage(10);
 		}
-		if (health <= 0) {
-			cout << "The [CANCEROUS RAT] eats your corpse." << endl;
-			player = false;
-			break;
-		}
+
 
 		if (rathealth <= 0) {
 			cout << ">> You obliterated the [CANCEROUS RAT]" << endl;
@@ -286,6 +309,8 @@ void player::enemyRATS()
 
 			cout << ">> Rummaging through the [CANCEROUS RAT]'s corpse, you find [TOAST]\n\n>> You dont question it." << endl;
 			alive = false;
+			toast = true;
+			ratfight = false;
 			
 			return;
 		}
@@ -301,8 +326,6 @@ void enemy(const char* enemy)
 }
 
 
-void player::playerheal(int amount) {
-	health + amount;
-}
+
 
 

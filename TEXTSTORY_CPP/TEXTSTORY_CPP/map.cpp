@@ -105,6 +105,7 @@ towards you. You dont feel safe here.
 	if (strcmp(input, "y") == 0) {
 		cout << "You go deeper in. The trees seem about to swallow you whole. \nYou find a silver key on the ground." << endl;
 		cout << "\nOBTAINED: SILVER KEY" << endl;
+		key = true;
 		return;
 	} 
 	if (strcmp(input, "n") == 0) {

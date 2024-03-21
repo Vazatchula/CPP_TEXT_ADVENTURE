@@ -51,21 +51,17 @@ int main(){
 )";
 
     cout << R"(
-Cool description here. Really cool. Description very cool description
-very cool description. Description.
+You find yourself in a dense forest. There doesnt seem to be any proper
+paths to lead you.
 
-Cool description here. Really cool. Description very cool description
-very cool description. Description. Cool description here. Really cool.
-Description very cool description very cool description. Description. 
-Cool description here. Really cool. Description very cool description
-very cool description. Description. Cool description here. Really cool. 
-Description very cool description very cool description. Description.
+The trees don't seem to have any defining features. The wood is smooth
+like plastic, almost looking artificial. How strange. 
 
 )";
 
-    //map* MAP = new map();
-    player* TESTPLAYER = new player(input, 100, 20, 10);
-    // String* location = new String(input);
+
+    player* TESTPLAYER = new player(input, 100, 20, 10); // creates player stats + name
+ 
     
 
     while (gameRunning == true) {
@@ -74,6 +70,7 @@ Description very cool description very cool description. Description.
         TESTPLAYER->healthCheck();
         cout << R"(
        //-- "menu" to open the menu --\\
+            //-- "q" to quit. --\\
 
 //-- MOVEMENT: "up", "down", "left", "right" --\\
 

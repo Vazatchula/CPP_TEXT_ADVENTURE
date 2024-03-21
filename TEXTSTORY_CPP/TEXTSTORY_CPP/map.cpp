@@ -7,6 +7,7 @@ using namespace std;
 #define _CRT_SECURE_NO_WARNINGS
 bool noWall = true;
 extern void enemy(const char* enemy);
+extern bool gameRunning;
 
 map::map()
 {
@@ -73,8 +74,32 @@ void map::roomDescription(int xpos, int ypos) {
 		sRoom_2();
 		return;
 	}
+	if ((xpos == 3) && (ypos == 5)) {
+		sRoom_3();
+		return;
+	}
+
+	srand(time(NULL));
+
+	int shuffle;
+	shuffle = rand() % 3;
+
+	switch (shuffle) {
+	case 1:
+		cout << "Trees surround you. There doesnt seem to be anything interesting here.\nAsides from a dense fog, perhaps.\n\n" << endl;
+		break;
+
+	case 2:
+		cout << "More trees. There is still nothing interesting in this area.\nMaybe check somewhere else?\n\n" << endl;
+		break;
+	case 3:
+		cout << "A scream echoes into the distance. You dont know what it is. You dont\nintend to go looking for an explanation.\n\n" << endl;
+		break;
+	default:
+		cout << "Trees. So many trees.\n\n" << endl;
+	}
 	
-	cout << "COOL ROOM DESCRIPTION. COOL ROOM DESCRIPTION. COOL ROOM DESCRIPTION.\n\n" << endl;
+	
 
 
 	cout << "Press any key to continue" << endl;
@@ -175,22 +200,61 @@ void map::sRoom_3()
 
 	cout << R"(
 
-The trees are denser here. Dark, dangerous. The branches seem to curl in 
-towards you. You dont feel safe here. 
+You are in a corner. The trees are thick enough to almost form a wall 
+blocking you from going any further. You follow this wall for a few metres
+before coming across a door.
+
+Maybe if you had a key... 
 
 
->> Go further in? (y/n)
 )";
+	if (key == true) {
+		cout << "Use [SILVER KEY]? (y/n)" << endl;
+		cout << ">> "; cin >> input; cout << "\n";
 
-	cout << ">> "; cin >> input; cout << "\n";
+		if (strcmp(input, "y") == 0) {
+			cout << "You use the [SILVER KEY] on the door.\nIt opens with a slow groan, filling the room with light." << endl;
+			cout << "Do you enter? (y/n)" << endl;
+			cout << ">> "; cin >> input; cout << "\n";
+			if (strcmp(input, "y") == 0) {
+				cout << "You enter the light. The trees can trap you no longer." << endl;
+				cout << R"(
 
-	if (strcmp(input, "y") == 0) {
-		cout << "You go deeper in. The trees seem about to swallow you whole. \nYou find a silver key on the ground." << endl;
-		cout << "\nOBTAINED: SILVER KEY" << endl;
-	} return;
-	if (strcmp(input, "n") == 0) {
-		cout << "You decide to go elsewhere." << endl;
-	} return;
+                     .___   
+    ____   ____    __| _/   
+  _/ __ \ /    \  / __ |    
+  \  ___/|   |  \/ /_/ |    
+   \___  >___|  /\____ | /\ 
+       \/     \/      \/ \/ 
+  
+
+)";
+				cout << "Press 'q' to exit the game." << endl;
+				cout << ">> "; cin >> input; cout << "\n";
+				if (strcmp(input, "q") == 0) {
+					gameRunning = false;
+					
+				}
+			}
+			if (strcmp(input, "n") == 0) {
+				cout << "You chicken out." << endl;
+				return;
+			}
+
+
+			
+		} return;
+		if (strcmp(input, "n") == 0) {
+			cout << "You decide to go elsewhere." << endl;
+		} return;
+	}
+	
+	else {
+		cout << "Press any key to continue" << endl;
+		cout << ">> "; cin >> input;
+	}
+
+	
 }
 
 void map::sRoom_4()

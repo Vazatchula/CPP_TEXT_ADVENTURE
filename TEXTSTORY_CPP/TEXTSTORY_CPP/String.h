@@ -34,10 +34,10 @@ public:
 	String& ToLower();
 	String& ToUpper();
 
-	//	size_t Find(const String& _str);
-	//	size_t Find(size_t _startIndex, const String& _str);
+		size_t Find(const String& _str);
+		size_t Find(size_t _startIndex, const String& _str);
 
-	//	String& Replace(const String& _find, const String& _replace);
+		String& Replace(const String& _find, const String& _replace);
 
 	String& ReadFromConsole();
 	String& WriteToConsole();

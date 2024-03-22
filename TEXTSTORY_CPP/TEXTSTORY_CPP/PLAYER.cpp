@@ -219,7 +219,7 @@ void player::inventory()
 				cout << "Desperate, you try to lick the frosting and crumbs from the box.\n\nWhat is wrong with you." << endl;
 				
 			}
-			else if (strcmp(input, "n") == 0) {
+			else if ((strcmp(input, "n") == 0) && (donutsactivate != false)) {
 
 				cout << "You decide to diet today.\n" << endl;
 			}

@@ -2,8 +2,10 @@
 #include "map.h"
 #include <iostream>
 #include "PLAYER.h"
+#include "String.h"
 using namespace std;
 int donutamount = 3;
+bool magicactivate = false;
 
 item::item()
 {
@@ -21,11 +23,12 @@ void item::inventoryKey()
     input = new char[12];
 
 	if (key == true) {
-		cout << "A silver key. This should open a door somewhere.\n Maybe in the future that mechanic will be implimented." << endl;
+		cout << "A silver key. This should open a door somewhere.\nSomething tells you that you will find it at the furthest corners...\n" << endl;
         cout << "Press any key to continue" << endl;
         cout << ">> "; cin >> input;
 
         // add door mechanic here
+               // edit: door mechanic was added in map, loser 
 
 	} else cout << "EMPTY" << endl;
 	
@@ -73,21 +76,41 @@ void item::inventoryDonuts()
 {
     char* input;
     input = new char[12];
-    
+    donutsactivate = true;
 
     if (donuts == true) {
         if (donutamount <= 0) {
             cout << "Donuts!! There are " << donutamount << " in the box!\nToo bad you ate them all." << endl;
             cout << "Press any key to continue" << endl;
+            donutsactivate = false;
 
         } else cout << "Donuts!! There are " << donutamount << " in the box!\nEat to regain health ? (y / n)" << endl;
         
 
-      /*  if (strcmp(input, "y") == 0) {
-            
-        }*/
-
-
     }
+}
+
+void item::magicUse()
+{
+    String* MAGIC = new String("fire, ice, water, air");
+    
+
+    char* input;
+    input = new char[12];
+
+    cout << ">> You cast: "; cin >> input; cout << endl;
+
+    String* choice = new String(input);
+
+    choice->Find(*MAGIC);
+
+
+}
+
+void item::magic()
+{
+
+ 
+    magicactivate = true;
 }
 

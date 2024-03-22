@@ -61,7 +61,7 @@ like plastic, almost looking artificial. How strange.
 
 
     player* TESTPLAYER = new player(input, 100, 20, 10); // creates player stats + name
- 
+    
     
 
     while (gameRunning == true) {
@@ -83,7 +83,7 @@ x1 and y3 for silver key
         cout << "\n";
 
         if (strcmp(input, "q") == 0) {
-            gameRunning = false;
+            gameRunning = false; // game exit code
             break;
         }
 
@@ -91,12 +91,12 @@ x1 and y3 for silver key
             inventoryOpen = true;
 
             while (inventoryOpen) {
-                TESTPLAYER->inventory();
+                TESTPLAYER->inventory(); // opens the inventory infinitely until closed
             }
             
 
         } else TESTPLAYER->move(input);
-        //TESTPLAYER->damage(20);
+       
         if (ratfight == true) TESTPLAYER->enemyRATS();
 
         

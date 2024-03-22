@@ -1,11 +1,2 @@
-﻿  PLAYER.cpp
-  String.cpp
-C:\Users\S240090\OneDrive - The Academy of Interactive Entertainment Ltd\Documents\CPP_TEXT_ADVENTURE\TEXTSTORY_CPP\TEXTSTORY_CPP\String.cpp(50,29): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  TEXTSTORY_CPP.cpp
-  item.cpp
-  map.cpp
-C:\Users\S240090\OneDrive - The Academy of Interactive Entertainment Ltd\Documents\CPP_TEXT_ADVENTURE\TEXTSTORY_CPP\TEXTSTORY_CPP\map.cpp(34,8): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\S240090\OneDrive - The Academy of Interactive Entertainment Ltd\Documents\CPP_TEXT_ADVENTURE\TEXTSTORY_CPP\TEXTSTORY_CPP\map.cpp(39,8): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\S240090\OneDrive - The Academy of Interactive Entertainment Ltd\Documents\CPP_TEXT_ADVENTURE\TEXTSTORY_CPP\TEXTSTORY_CPP\map.cpp(82,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Generating Code...
+﻿  item.cpp
   TEXTSTORY_CPP.vcxproj -> C:\Users\S240090\OneDrive - The Academy of Interactive Entertainment Ltd\Documents\CPP_TEXT_ADVENTURE\TEXTSTORY_CPP\x64\Debug\TEXTSTORY_CPP.exe

@@ -9,6 +9,9 @@ public:
     void inventoryKey();
     void inventoryToast();
     void inventoryDonuts();
+    void magicUse();
+
+    void magic();
 
 
 

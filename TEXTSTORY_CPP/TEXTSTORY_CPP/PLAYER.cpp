@@ -22,8 +22,9 @@ player::player(const char* NAME, int HP, int ATTK, int MN)
 	name[0] = '\0';
 	strcat(name, NAME);
 
-	//name = NAME.CStr();
 	//cout << "+++ player constructor: " << name << " +++" << endl;
+
+
 	health = HP;
 	attack = ATTK;
 	mana = MN;
@@ -32,7 +33,7 @@ player::player(const char* NAME, int HP, int ATTK, int MN)
 	cout << "HEALTH: " << health << endl;
 	cout << "ATTACK: " << attack << endl;
 	cout << "MANA: " << mana << endl;
-	//cout << name;
+	
 	if (health <= 0) gameRunning = false;
 	else gameRunning = true;
 	
@@ -209,9 +210,18 @@ void player::inventory()
 		else if (strcmp(input, "3") == 0) {
 			inventoryDonuts();
 			cout << ">> "; cin >> input; cout << "\n \n";
-			if (strcmp(input, "y") == 0) {
+			if ((strcmp(input, "y") == 0) && (donutsactivate == true)) {
 				damage(-20);
 				donutamount = donutamount - 1;
+			}
+			if ((strcmp(input, "y") == 0) && (donutsactivate == false)) {
+				
+				cout << "Desperate, you try to lick the frosting and crumbs from the box.\n\nWhat is wrong with you." << endl;
+				
+			}
+			else if (strcmp(input, "n") == 0) {
+
+				cout << "You decide to diet today.\n" << endl;
 			}
 			return;
 		}
@@ -258,7 +268,7 @@ void player::enemyRATS()
 		cout << R"(
           //-- "menu" to open the menu --\\
 
-//-- ACTIONS: "punch", "kick", "taunt", "fireball" --\\
+//-- ACTIONS: "punch", "kick", "taunt", "magic" --\\
 
 )";
 
@@ -294,12 +304,15 @@ void player::enemyRATS()
 			
 			damage(5);
 		}
-		if ((strcmp(input, "fireball") == 0) && (health > 0)) {
-			cout << ">> You cast fireball on the [CANCEROUS RAT] for 60 DAMAGE." << endl;
+		if ((strcmp(input, "magic") == 0) && (health > 0)) {
+
+			magicUse();
+
+			/*cout << ">> You cast fireball on the [CANCEROUS RAT] for 60 DAMAGE." << endl;
 			cout << "You take 10 DAMAGE due to the explosion." << endl;
-			rathealth = rathealth - 60;
+			rathealth = rathealth - 60;*/
 			
-			damage(10);
+			// damage(10);
 		}
 
 

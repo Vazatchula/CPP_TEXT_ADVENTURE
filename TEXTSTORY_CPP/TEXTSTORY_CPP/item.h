@@ -9,7 +9,7 @@ public:
     void inventoryKey();
     void inventoryToast();
     void inventoryDonuts();
-    void magicUse();
+    void magicUse(const char* input);
 
   
 

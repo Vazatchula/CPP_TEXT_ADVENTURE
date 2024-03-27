@@ -1,5 +1,5 @@
 ﻿  PLAYER.cpp
   item.cpp
-C:\Users\S240090\OneDrive - The Academy of Interactive Entertainment Ltd\Documents\CPP_TEXT_ADVENTURE\TEXTSTORY_CPP\TEXTSTORY_CPP\item.cpp(132,30): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   Generating Code...
-C:\Users\S240090\OneDrive - The Academy of Interactive Entertainment Ltd\Documents\CPP_TEXT_ADVENTURE\TEXTSTORY_CPP\TEXTSTORY_CPP\item.cpp(141): error C4716: 'knownSpell': must return a value
+C:\Users\Fallon\Documents\GitHub\CPP_TEXT_ADVENTURE\TEXTSTORY_CPP\TEXTSTORY_CPP\item.cpp(140,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  TEXTSTORY_CPP.vcxproj -> C:\Users\Fallon\Documents\GitHub\CPP_TEXT_ADVENTURE\TEXTSTORY_CPP\x64\Debug\TEXTSTORY_CPP.exe

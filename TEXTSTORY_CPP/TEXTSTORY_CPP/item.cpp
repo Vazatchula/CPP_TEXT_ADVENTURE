@@ -9,6 +9,8 @@ using namespace std;
 int donutamount = 3;
 int magicactivate;
 extern vector<string> Magic;
+bool knownMagic = false;
+bool knownSpell(const char* input);
 
 
 item::item()
@@ -86,7 +88,7 @@ void item::inventoryDonuts()
         if (donutamount <= 0) {
             cout << "Donuts!! There are " << donutamount << " in the box!\nToo bad you ate them all." << endl;
             cout << "Press any key to continue" << endl;
-            donutsactivate = false;
+            donutsactivate = false; // ate themb :(
 
         } else cout << "Donuts!! There are " << donutamount << " in the box!\nEat to regain health ? (y / n)" << endl;
         
@@ -94,11 +96,17 @@ void item::inventoryDonuts()
     }
 }
 
-void item::magicUse()
+void item::magicUse(const char* input)
 {
+    // fun stuff to jump around between files
 
-
-
+    if (knownSpell(input) == true) {
+        knownMagic = true;
+        return;
+    }
+    if (knownSpell(input) == false) {
+        cout << "You do not know this spell." << endl;
+    }
 
 
 
@@ -127,16 +135,21 @@ void item::magicUse()
 
 }
 
-bool knownSpell(const String& spell) {
+bool knownSpell(const char* spell) {
     int bottom = 0;
     int top = size(Magic) - 1;
 
     while (bottom <= top) {
 
-    };
+        int middle = (bottom + top) / 2;
+
+        if (Magic[middle] == spell) return true;
+        else if (Magic[middle] < spell) bottom = middle + 1;
+        else top = middle - 1;
+    }
+    return false; // if spell is not found
 
 
 
-
-};
+}
 

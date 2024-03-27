@@ -16,6 +16,7 @@ bool playerAlive;
 extern int donutamount;
 extern int magicactivate;
 vector<string> Magic;
+extern bool knownMagic;
 
 player::player(const char* NAME, int HP, int ATTK, int MN)
 {
@@ -53,7 +54,7 @@ player::player(const char* NAME, int HP, int ATTK, int MN)
 
 player::~player()
 {
-	
+
 }
 
 void player::healthCheck() {
@@ -72,7 +73,7 @@ void player::move(const String& direction)
 		if (strcmp(movement, "up") == 0) {
 			if (yLimit == true) {
 				cout << "You cant move any further\n" << endl;
-				return;
+				return; // no more noclipping through the walls sorry guys
 			}
 			else {
 				mapY++;
@@ -86,7 +87,7 @@ void player::move(const String& direction)
 		else if (strcmp(movement, "right") == 0) {
 			if (xLimit == true) {
 				cout << "You cant move any further\n" << endl;
-				return;
+				return; // no noclipping this way either soz
 			}
 			else {
 				mapX++;
@@ -98,7 +99,7 @@ void player::move(const String& direction)
 			return;
 		}
 		else if (strcmp(movement, "down") == 0) {
-			mapY--;
+			mapY--; // moves the coords down
 			if (mapY < 0) {
 				mapY = 0;
 				cout << "You cant move any further\n" << endl;
@@ -111,7 +112,7 @@ void player::move(const String& direction)
 			return;
 		}
 		else if (strcmp(movement, "left") == 0) {
-			mapX--;
+			mapX--; // moves the coords down
 			if (mapX < 0) {
 				mapX = 0;
 				cout << "You cant move any further\n" << endl;
@@ -123,9 +124,11 @@ void player::move(const String& direction)
 			
 			return;
 		}
+
+		// idk why its in here twice but im too scared to remove it
 	
 		if (strcmp(movement, "down") == 0) {
-			mapY--;
+			mapY--; // moves the coords down
 			if (mapY < 0) {
 				mapY = 0;
 				cout << "You cant move any further\n" << endl;
@@ -138,7 +141,7 @@ void player::move(const String& direction)
 			return;
 		}
 		else if (strcmp(movement, "left") == 0) {
-			mapX--;
+			mapX--; // moves the coords down
 			if (mapX < 0) {
 				mapX = 0;
 				cout << "You cant move any further\n" << endl;
@@ -245,7 +248,7 @@ void player::inventory()
 }
 
 
-void player::enemyRATS()
+void player::enemyRATS() // ignore the mess 
 {
 	int rathealth = 50;
 	bool alive = true;
@@ -288,35 +291,35 @@ void player::enemyRATS()
 
 
 		if ((strcmp(input, "menu") == 0) && (ratfight == true) && (health > 0)) {
-			inventoryOpen = true;
+			inventoryOpen = true; // begin inv. loop
 
 			while (inventoryOpen) {
-				inventory();
+				inventory(); // inv. loop is closed in here
 			}
 
 
 		}
 		if ((strcmp(input, "punch") == 0) && (health > 0)) {
 			cout << ">> You punch the [CANCEROUS RAT] for 10 DAMAGE." << endl;
-			rathealth = rathealth - 10;
+			rathealth = rathealth - 10; // owWW
 
 			
 		}
 		if ((strcmp(input, "kick") == 0) && (health > 0)) {
 			cout << ">> You kick the [CANCEROUS RAT] for 30 DAMAGE." << endl;
-			rathealth = rathealth - 30;
+			rathealth = rathealth - 30; // YEEEOUCH
 			
 		}
 		if ((strcmp(input, "taunt") == 0) && (health > 0)) {
 			cout << ">> You taunt the [CANCEROUS RAT] for 5 DAMAGE." << endl;
 			cout << ">> The [CANCEROUS RAT] gets pissed. You take 5 DAMAGE from rat curses." << endl;
-			rathealth = rathealth - 5;
+			rathealth = rathealth - 5; // owie
 			
 			damage(5);
 		}
 		if ((strcmp(input, "magic") == 0) && (health > 0)) {
 
-			String* MAGIC = new String("fire, ice, water, air");
+			//String* MAGIC = new String("fire, ice, water, air");
 
 
 			char* input;
@@ -326,9 +329,14 @@ void player::enemyRATS()
 			
 
 			String* choice = new String(input);
-			magicUse();
 
 
+			magicUse(input); // spells are fire, air, ice, water
+
+			if (knownMagic == true) {
+				cout << "You blast the [CANCEROUS RAT] with " << input << " for " << mana << " damage!!" << endl;
+				rathealth = rathealth - mana;
+			}
 
 
 

@@ -1,5 +1,9 @@
 ﻿  PLAYER.cpp
   item.cpp
-  Generating Code...
+  map.cpp
 C:\Users\Fallon\Documents\GitHub\CPP_TEXT_ADVENTURE\TEXTSTORY_CPP\TEXTSTORY_CPP\item.cpp(140,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Fallon\Documents\GitHub\CPP_TEXT_ADVENTURE\TEXTSTORY_CPP\TEXTSTORY_CPP\map.cpp(34,8): warning C4553: '==': result of expression not used; did you intend '='?
+C:\Users\Fallon\Documents\GitHub\CPP_TEXT_ADVENTURE\TEXTSTORY_CPP\TEXTSTORY_CPP\map.cpp(39,8): warning C4553: '==': result of expression not used; did you intend '='?
+C:\Users\Fallon\Documents\GitHub\CPP_TEXT_ADVENTURE\TEXTSTORY_CPP\TEXTSTORY_CPP\map.cpp(82,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
   TEXTSTORY_CPP.vcxproj -> C:\Users\Fallon\Documents\GitHub\CPP_TEXT_ADVENTURE\TEXTSTORY_CPP\x64\Debug\TEXTSTORY_CPP.exe

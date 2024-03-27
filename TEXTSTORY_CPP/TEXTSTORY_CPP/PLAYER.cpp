@@ -8,26 +8,29 @@
 
 using namespace std;
 bool gameRunning;
-extern bool inventoryOpen;
-void enemy(const char* enemy);
+extern bool inventoryOpen; // item class. Keeps the inventory looping until closed by player
+void enemy(const char* enemy); // i dont remember i think its just a loop to jump through the different files because it was ass
 
 bool ratfight;
 bool playerAlive;
-extern int donutamount;
-extern int magicactivate;
-vector<string> Magic;
-extern bool knownMagic;
+extern int donutamount; // from item class
+extern int magicactivate; // ^
+vector<string> Magic; // the vector itself is here, though
+extern bool knownMagic; // item class
 
 player::player(const char* NAME, int HP, int ATTK, int MN)
 {
-	
+	// making the name usuable in the class. annoying
 	name = new char[strlen(NAME)];
 	name[0] = '\0';
 	strcat(name, NAME);
 
+
+	// ignore this
 	//cout << "+++ player constructor: " << name << " +++" << endl;
 
 
+	// assign every value to something useable in the class. imporant //
 	health = HP;
 	attack = ATTK;
 	mana = MN;
@@ -37,11 +40,15 @@ player::player(const char* NAME, int HP, int ATTK, int MN)
 	cout << "ATTACK: " << attack << endl;
 	cout << "MANA: " << mana << endl;
 	
+	// I have so many ways to turn off this bool and it does nothing still :skull:
 	if (health <= 0) gameRunning = false;
 	else gameRunning = true;
 	
+	// didnt implement a way to collect the healing item, turned it on at spawn-in
 	donuts = true;
 
+
+	// for the magic binary search. It was actually a lot easier than I thought
 	Magic.push_back("fire");
 	Magic.push_back("ice");
 	Magic.push_back("water");
@@ -61,12 +68,12 @@ void player::healthCheck() {
 	cout << "HEALTH: " << health << endl;
 	cout << "ATTACK: " << attack << endl;
 	cout << "MANA: " << mana << endl;
-	if (health <= 0) gameRunning = false;
+	if (health <= 0) gameRunning = false; // an attempt to make the game shut off faster when the player dies...
 }
 
 void player::move(const String& direction)
 {
-	const char* movement = direction.CStr();
+	const char* movement = direction.CStr(); // taking the input into a useable value
 	
 
 	
@@ -76,11 +83,11 @@ void player::move(const String& direction)
 				return; // no more noclipping through the walls sorry guys
 			}
 			else {
-				mapY++;
+				mapY++; // moves the coords up
 				cout << ">> " << name << ": You move up to the next room\n" << endl;
 			}
-			roomDescription(mapX, mapY);
-			mapcheck(mapX, mapY);
+			roomDescription(mapX, mapY); // these both go to map file
+			mapcheck(mapX, mapY); // "
 			
 			return;
 		}
@@ -90,7 +97,7 @@ void player::move(const String& direction)
 				return; // no noclipping this way either soz
 			}
 			else {
-				mapX++;
+				mapX++; // moves the coords up
 				cout << ">> " << name << ": You move right to the next room\n" << endl;
 			}
 			roomDescription(mapX, mapY);
@@ -125,37 +132,12 @@ void player::move(const String& direction)
 			return;
 		}
 
-		// idk why its in here twice but im too scared to remove it
+
 	
-		if (strcmp(movement, "down") == 0) {
-			mapY--; // moves the coords down
-			if (mapY < 0) {
-				mapY = 0;
-				cout << "You cant move any further\n" << endl;
-				return;
-			}
-			else cout << ">> " << name << ": You move left to the next room\n" << endl;
-			roomDescription(mapX, mapY);
-			mapcheck(mapX, mapY);
-			
-			return;
-		}
-		else if (strcmp(movement, "left") == 0) {
-			mapX--; // moves the coords down
-			if (mapX < 0) {
-				mapX = 0;
-				cout << "You cant move any further\n" << endl;
-				return;
-			}
-			else cout << ">> " << name << ": You move left to the next room\n" << endl;
-			//cout << xPosition;
-			roomDescription(mapX, mapY);
-			mapcheck(mapX, mapY);
-			//cout << &mapcheck;
-			return;
-		}
 	
-	else if (strcmp(movement, "stay") == 0) {
+	
+	else if (strcmp(movement, "stay") == 0) { // not much point to this rn but i did have events planned that needed you to wait so. its handy
+
 		//cout << xPosition;
 		cout << ">> " << name << ": You decide to wait in this room\n" << endl;
 		//roomDescription(mapX, mapY);
@@ -163,7 +145,7 @@ void player::move(const String& direction)
 		//cout << &mapcheck;
 				return;
 	}
-	else {
+	else { // room for mistakes :)
 		cout << "INVALID OPTION. OPTIONS ARE:" << endl;
 		cout << "'up', 'down', 'left', 'right', 'stay'\n" << endl;
 		//cout << mapcheck;
@@ -176,16 +158,16 @@ void player::move(const String& direction)
 void player::damage(const int& dmg)
 {
 	int damage = dmg;
-	if (damage < 0) cout << name << " gained health!" << endl;
+	if (damage < 0) cout << name << " gained health!" << endl; // different message for healing, simply putting in a negative dmg value will print this
 	else cout << name << " took damage!" << endl;
-	health -= damage;
+	health -= damage; // only one of these. health minus a minus simply heals. quickmath
 	
-	cout << "PLAYER HEALTH: " << health << endl;
+	cout << "PLAYER HEALTH: " << health << endl; // damage counter
 	
 	if (health <= 0) {
-		playerAlive = false;
-		cout << name << " has died" << endl;
-		gameRunning = false;
+		playerAlive = false; // supposed to stop the game but doesnt idk
+		cout << name << " has died" << endl; // this works tho.
+		gameRunning = false; // also supposed to stop the game but doesnt :*(
 		
 	}
 	return;
@@ -264,7 +246,7 @@ void player::enemyRATS() // ignore the mess
 	while ((alive == true) || (player == true)) {
 		
 		if (health <= 0) {
-			cout << "The [CANCEROUS RAT] eats your corpse." << endl;
+			cout << "The [CANCEROUS RAT] eats your corpse." << endl; // rip lil bro
 
 			player = false;
 
@@ -272,7 +254,7 @@ void player::enemyRATS() // ignore the mess
 			break;
 		}
 
-		cout << ">> The [CANCEROUS RAT] bites you for 10 DAMAGE" << endl;
+		cout << ">> The [CANCEROUS RAT] bites you for 10 DAMAGE" << endl; // rat gets first turn cause its just better
 		damage(10);
 		cout << "ENEMY HP: " << rathealth << endl;
 
@@ -338,49 +320,6 @@ void player::enemyRATS() // ignore the mess
 				rathealth = rathealth - mana;
 			}
 
-
-
-
-			//switch (magicactivate) {
-
-			//case 1:
-			//	cout << "fire magic" << endl;
-			//	cout << ">> You explode the [CANCEROUS RAT] for " << mana << " DAMAGE." << endl;
-			//	rathealth = rathealth - mana;
-			//	break;
-
-			//case 2:
-			//	cout << "ice magic" << endl;
-			//	cout << ">> You freeze the [CANCEROUS RAT] for " << mana << " DAMAGE." << endl;
-			//	rathealth = rathealth - mana;
-			//	break;
-
-			//case 3:
-			//	cout << "water magic" << endl;
-			//	cout << ">> You drown the [CANCEROUS RAT] for " << mana << " DAMAGE." << endl;
-			//	rathealth = rathealth - mana;
-			//	break;
-
-			//case 4:
-			//	cout << "air magic" << endl;
-			//	cout << ">> You send the [CANCEROUS RAT] flying into the air for " << mana << " DAMAGE." << endl;
-			//	rathealth = rathealth - mana;
-			//	break;
-
-			//case 5:
-			//	cout << "INCORRECT OPTION." << endl;
-			//	magicUse();
-
-			//default:
-			//	cout << "INCORRECT OPTION." << endl;
-			//	magicUse();
-			//}
-
-			/*cout << ">> You cast fireball on the [CANCEROUS RAT] for 60 DAMAGE." << endl;
-			cout << "You take 10 DAMAGE due to the explosion." << endl;
-			rathealth = rathealth - 60;*/
-			
-			// damage(10);
 		}
 
 

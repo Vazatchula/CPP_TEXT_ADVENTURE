@@ -26,25 +26,25 @@ void map::mapcheck(int xposition, int yposition) {
 	mapX = xposition;
 	mapY = yposition;
 	
-	xLimit = false;
-	yLimit = false;
+	xLimit = false; // wall boundaries
+	yLimit = false; // wall boundaries
 
 	if ((mapX >= 3) && (mapY != 5)) {
 		cout << "MAX X MOVEMENT 3: " << mapX << endl;
 		mapY == 4;
-		if ((mapX >= 3) && (mapY != 5)) xLimit = true;
+		if ((mapX >= 3) && (mapY != 5)) xLimit = true; // sets wall to true, stops movement
 		
 	} else if ((mapY >= 5) && (mapX != 3)) {
 		cout << "MAX Y MOVEMENT 5: " << mapY << endl;
 		mapY == 4;
-		if ((mapY >= 5) && (mapX != 3)) yLimit = true;
+		if ((mapY >= 5) && (mapX != 3)) yLimit = true; // same as above
 
 	}else if ((mapY >= 5) && (mapX >= 3)) {
 
 		cout << "MAX X MOVEMENT 3: " << mapX << endl;
-		cout << "MAX Y MOVEMENT 5: " << mapY << endl;
+		cout << "MAX Y MOVEMENT 5: " << mapY << endl; // visual reference of the max movement
 		xLimit = true;
-		yLimit = true;
+		yLimit = true; // these are global variables, they go back to the player file and create a cout explaining the boundaries reached
 
 	} return;
 

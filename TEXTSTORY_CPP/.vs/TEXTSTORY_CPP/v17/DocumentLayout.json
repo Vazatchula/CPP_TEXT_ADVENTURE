@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Fallon\\Documents\\GitHub\\CPP_TEXT_ADVENTURE\\TEXTSTORY_CPP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DE9A43AE-7504-49D4-9F53-60A6BD4E2A49}|TEXTSTORY_CPP\\TEXTSTORY_CPP.vcxproj|C:\\Users\\Fallon\\Documents\\GitHub\\CPP_TEXT_ADVENTURE\\TEXTSTORY_CPP\\TEXTSTORY_CPP\\PLAYER.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{DE9A43AE-7504-49D4-9F53-60A6BD4E2A49}|TEXTSTORY_CPP\\TEXTSTORY_CPP.vcxproj|solutionrelative:TEXTSTORY_CPP\\PLAYER.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE9A43AE-7504-49D4-9F53-60A6BD4E2A49}|TEXTSTORY_CPP\\TEXTSTORY_CPP.vcxproj|C:\\Users\\Fallon\\Documents\\GitHub\\CPP_TEXT_ADVENTURE\\TEXTSTORY_CPP\\TEXTSTORY_CPP\\item.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{DE9A43AE-7504-49D4-9F53-60A6BD4E2A49}|TEXTSTORY_CPP\\TEXTSTORY_CPP.vcxproj|solutionrelative:TEXTSTORY_CPP\\item.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE9A43AE-7504-49D4-9F53-60A6BD4E2A49}|TEXTSTORY_CPP\\TEXTSTORY_CPP.vcxproj|C:\\Users\\Fallon\\Documents\\GitHub\\CPP_TEXT_ADVENTURE\\TEXTSTORY_CPP\\TEXTSTORY_CPP\\item.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{DE9A43AE-7504-49D4-9F53-60A6BD4E2A49}|TEXTSTORY_CPP\\TEXTSTORY_CPP.vcxproj|solutionrelative:TEXTSTORY_CPP\\item.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DE9A43AE-7504-49D4-9F53-60A6BD4E2A49}|TEXTSTORY_CPP\\TEXTSTORY_CPP.vcxproj|C:\\Users\\Fallon\\Documents\\GitHub\\CPP_TEXT_ADVENTURE\\TEXTSTORY_CPP\\TEXTSTORY_CPP\\TEXTSTORY_CPP.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{DE9A43AE-7504-49D4-9F53-60A6BD4E2A49}|TEXTSTORY_CPP\\TEXTSTORY_CPP.vcxproj|solutionrelative:TEXTSTORY_CPP\\TEXTSTORY_CPP.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE9A43AE-7504-49D4-9F53-60A6BD4E2A49}|TEXTSTORY_CPP\\TEXTSTORY_CPP.vcxproj|C:\\Users\\Fallon\\Documents\\GitHub\\CPP_TEXT_ADVENTURE\\TEXTSTORY_CPP\\TEXTSTORY_CPP\\String.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{DE9A43AE-7504-49D4-9F53-60A6BD4E2A49}|TEXTSTORY_CPP\\TEXTSTORY_CPP.vcxproj|solutionrelative:TEXTSTORY_CPP\\String.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{DE9A43AE-7504-49D4-9F53-60A6BD4E2A49}|TEXTSTORY_CPP\\TEXTSTORY_CPP.vcxproj|C:\\Users\\Fallon\\Documents\\GitHub\\CPP_TEXT_ADVENTURE\\TEXTSTORY_CPP\\TEXTSTORY_CPP\\PLAYER.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DE9A43AE-7504-49D4-9F53-60A6BD4E2A49}|TEXTSTORY_CPP\\TEXTSTORY_CPP.vcxproj|solutionrelative:TEXTSTORY_CPP\\PLAYER.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DE9A43AE-7504-49D4-9F53-60A6BD4E2A49}|TEXTSTORY_CPP\\TEXTSTORY_CPP.vcxproj|C:\\Users\\Fallon\\Documents\\GitHub\\CPP_TEXT_ADVENTURE\\TEXTSTORY_CPP\\TEXTSTORY_CPP\\PLAYER.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -31,12 +19,24 @@
       "RelativeMoniker": "D:0:0:{DE9A43AE-7504-49D4-9F53-60A6BD4E2A49}|TEXTSTORY_CPP\\TEXTSTORY_CPP.vcxproj|solutionrelative:TEXTSTORY_CPP\\map.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{DE9A43AE-7504-49D4-9F53-60A6BD4E2A49}|TEXTSTORY_CPP\\TEXTSTORY_CPP.vcxproj|C:\\Users\\Fallon\\Documents\\GitHub\\CPP_TEXT_ADVENTURE\\TEXTSTORY_CPP\\TEXTSTORY_CPP\\String.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DE9A43AE-7504-49D4-9F53-60A6BD4E2A49}|TEXTSTORY_CPP\\TEXTSTORY_CPP.vcxproj|solutionrelative:TEXTSTORY_CPP\\String.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DE9A43AE-7504-49D4-9F53-60A6BD4E2A49}|TEXTSTORY_CPP\\TEXTSTORY_CPP.vcxproj|C:\\Users\\Fallon\\Documents\\GitHub\\CPP_TEXT_ADVENTURE\\TEXTSTORY_CPP\\TEXTSTORY_CPP\\map.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{DE9A43AE-7504-49D4-9F53-60A6BD4E2A49}|TEXTSTORY_CPP\\TEXTSTORY_CPP.vcxproj|solutionrelative:TEXTSTORY_CPP\\map.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE9A43AE-7504-49D4-9F53-60A6BD4E2A49}|TEXTSTORY_CPP\\TEXTSTORY_CPP.vcxproj|C:\\Users\\Fallon\\Documents\\GitHub\\CPP_TEXT_ADVENTURE\\TEXTSTORY_CPP\\TEXTSTORY_CPP\\String.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{DE9A43AE-7504-49D4-9F53-60A6BD4E2A49}|TEXTSTORY_CPP\\TEXTSTORY_CPP.vcxproj|solutionrelative:TEXTSTORY_CPP\\String.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{DE9A43AE-7504-49D4-9F53-60A6BD4E2A49}|TEXTSTORY_CPP\\TEXTSTORY_CPP.vcxproj|C:\\Users\\Fallon\\Documents\\GitHub\\CPP_TEXT_ADVENTURE\\TEXTSTORY_CPP\\TEXTSTORY_CPP\\item.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DE9A43AE-7504-49D4-9F53-60A6BD4E2A49}|TEXTSTORY_CPP\\TEXTSTORY_CPP.vcxproj|solutionrelative:TEXTSTORY_CPP\\item.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE9A43AE-7504-49D4-9F53-60A6BD4E2A49}|TEXTSTORY_CPP\\TEXTSTORY_CPP.vcxproj|C:\\Users\\Fallon\\Documents\\GitHub\\CPP_TEXT_ADVENTURE\\TEXTSTORY_CPP\\TEXTSTORY_CPP\\item.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DE9A43AE-7504-49D4-9F53-60A6BD4E2A49}|TEXTSTORY_CPP\\TEXTSTORY_CPP.vcxproj|solutionrelative:TEXTSTORY_CPP\\item.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE9A43AE-7504-49D4-9F53-60A6BD4E2A49}|TEXTSTORY_CPP\\TEXTSTORY_CPP.vcxproj|C:\\Users\\Fallon\\Documents\\GitHub\\CPP_TEXT_ADVENTURE\\TEXTSTORY_CPP\\TEXTSTORY_CPP\\String.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DE9A43AE-7504-49D4-9F53-60A6BD4E2A49}|TEXTSTORY_CPP\\TEXTSTORY_CPP.vcxproj|solutionrelative:TEXTSTORY_CPP\\String.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -45,57 +45,57 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 214,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 173,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "TEXTSTORY_CPP.cpp",
               "DocumentMoniker": "C:\\Users\\Fallon\\Documents\\GitHub\\CPP_TEXT_ADVENTURE\\TEXTSTORY_CPP\\TEXTSTORY_CPP\\TEXTSTORY_CPP.cpp",
               "RelativeDocumentMoniker": "TEXTSTORY_CPP\\TEXTSTORY_CPP.cpp",
               "ToolTip": "C:\\Users\\Fallon\\Documents\\GitHub\\CPP_TEXT_ADVENTURE\\TEXTSTORY_CPP\\TEXTSTORY_CPP\\TEXTSTORY_CPP.cpp",
               "RelativeToolTip": "TEXTSTORY_CPP\\TEXTSTORY_CPP.cpp",
-              "ViewState": "AQIAABoAAAAAAAAAAAAAADcAAAAAAAAA",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAAE0AAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-10T23:30:29.462Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PLAYER.cpp",
-              "DocumentMoniker": "C:\\Users\\Fallon\\Documents\\GitHub\\CPP_TEXT_ADVENTURE\\TEXTSTORY_CPP\\TEXTSTORY_CPP\\PLAYER.cpp",
-              "RelativeDocumentMoniker": "TEXTSTORY_CPP\\PLAYER.cpp",
-              "ToolTip": "C:\\Users\\Fallon\\Documents\\GitHub\\CPP_TEXT_ADVENTURE\\TEXTSTORY_CPP\\TEXTSTORY_CPP\\PLAYER.cpp",
-              "RelativeToolTip": "TEXTSTORY_CPP\\PLAYER.cpp",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAADoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-10T23:30:31.604Z",
               "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 186,
+          "DockedWidth": 227,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "PLAYER.cpp",
+              "DocumentMoniker": "C:\\Users\\Fallon\\Documents\\GitHub\\CPP_TEXT_ADVENTURE\\TEXTSTORY_CPP\\TEXTSTORY_CPP\\PLAYER.cpp",
+              "RelativeDocumentMoniker": "TEXTSTORY_CPP\\PLAYER.cpp",
+              "ToolTip": "C:\\Users\\Fallon\\Documents\\GitHub\\CPP_TEXT_ADVENTURE\\TEXTSTORY_CPP\\TEXTSTORY_CPP\\PLAYER.cpp",
+              "RelativeToolTip": "TEXTSTORY_CPP\\PLAYER.cpp",
+              "ViewState": "AQIAACABAAAAAAAAAAAAAEQBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-10T23:30:31.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "item.cpp",
               "DocumentMoniker": "C:\\Users\\Fallon\\Documents\\GitHub\\CPP_TEXT_ADVENTURE\\TEXTSTORY_CPP\\TEXTSTORY_CPP\\item.cpp",
               "RelativeDocumentMoniker": "TEXTSTORY_CPP\\item.cpp",
               "ToolTip": "C:\\Users\\Fallon\\Documents\\GitHub\\CPP_TEXT_ADVENTURE\\TEXTSTORY_CPP\\TEXTSTORY_CPP\\item.cpp",
               "RelativeToolTip": "TEXTSTORY_CPP\\item.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGQAAAAtAAAA",
+              "ViewState": "AQIAAHgAAAAAAAAAAAAAAGQAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-19T05:17:23.167Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "item.h",
               "DocumentMoniker": "C:\\Users\\Fallon\\Documents\\GitHub\\CPP_TEXT_ADVENTURE\\TEXTSTORY_CPP\\TEXTSTORY_CPP\\item.h",
               "RelativeDocumentMoniker": "TEXTSTORY_CPP\\item.h",
@@ -108,31 +108,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "map.cpp",
               "DocumentMoniker": "C:\\Users\\Fallon\\Documents\\GitHub\\CPP_TEXT_ADVENTURE\\TEXTSTORY_CPP\\TEXTSTORY_CPP\\map.cpp",
               "RelativeDocumentMoniker": "TEXTSTORY_CPP\\map.cpp",
               "ToolTip": "C:\\Users\\Fallon\\Documents\\GitHub\\CPP_TEXT_ADVENTURE\\TEXTSTORY_CPP\\TEXTSTORY_CPP\\map.cpp",
               "RelativeToolTip": "TEXTSTORY_CPP\\map.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-10T23:30:31.635Z"
+              "WhenOpened": "2024-03-10T23:30:31.635Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "PLAYER.h",
               "DocumentMoniker": "C:\\Users\\Fallon\\Documents\\GitHub\\CPP_TEXT_ADVENTURE\\TEXTSTORY_CPP\\TEXTSTORY_CPP\\PLAYER.h",
               "RelativeDocumentMoniker": "TEXTSTORY_CPP\\PLAYER.h",
               "ToolTip": "C:\\Users\\Fallon\\Documents\\GitHub\\CPP_TEXT_ADVENTURE\\TEXTSTORY_CPP\\TEXTSTORY_CPP\\PLAYER.h",
               "RelativeToolTip": "TEXTSTORY_CPP\\PLAYER.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAdAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-10T23:30:31.637Z"
+              "WhenOpened": "2024-03-10T23:30:31.637Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "String.h",
               "DocumentMoniker": "C:\\Users\\Fallon\\Documents\\GitHub\\CPP_TEXT_ADVENTURE\\TEXTSTORY_CPP\\TEXTSTORY_CPP\\String.h",
               "RelativeDocumentMoniker": "TEXTSTORY_CPP\\String.h",
@@ -140,23 +142,25 @@
               "RelativeToolTip": "TEXTSTORY_CPP\\String.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-10T23:30:31.638Z"
+              "WhenOpened": "2024-03-10T23:30:31.638Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "map.h",
               "DocumentMoniker": "C:\\Users\\Fallon\\Documents\\GitHub\\CPP_TEXT_ADVENTURE\\TEXTSTORY_CPP\\TEXTSTORY_CPP\\map.h",
               "RelativeDocumentMoniker": "TEXTSTORY_CPP\\map.h",
               "ToolTip": "C:\\Users\\Fallon\\Documents\\GitHub\\CPP_TEXT_ADVENTURE\\TEXTSTORY_CPP\\TEXTSTORY_CPP\\map.h",
               "RelativeToolTip": "TEXTSTORY_CPP\\map.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAHAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAUAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-10T23:30:31.636Z"
+              "WhenOpened": "2024-03-10T23:30:31.636Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "String.cpp",
               "DocumentMoniker": "C:\\Users\\Fallon\\Documents\\GitHub\\CPP_TEXT_ADVENTURE\\TEXTSTORY_CPP\\TEXTSTORY_CPP\\String.cpp",
               "RelativeDocumentMoniker": "TEXTSTORY_CPP\\String.cpp",
@@ -164,8 +168,7 @@
               "RelativeToolTip": "TEXTSTORY_CPP\\String.cpp",
               "ViewState": "AQIAALgAAAAAAAAAAAAAAFYAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-10T23:30:31.508Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-10T23:30:31.508Z"
             }
           ]
         }

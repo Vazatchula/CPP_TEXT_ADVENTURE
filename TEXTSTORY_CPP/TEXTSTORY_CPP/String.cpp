@@ -132,7 +132,11 @@ size_t String::Find(const String& _str)
 {
 	char* found = strstr(strNew, _str.strNew);
 
+	
+
 	if (found == nullptr) return -1;
+
+	cout << "First occurance is " << found << endl;
 
 	return found - strNew;
 }

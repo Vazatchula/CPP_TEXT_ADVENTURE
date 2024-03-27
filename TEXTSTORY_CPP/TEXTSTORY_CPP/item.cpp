@@ -3,9 +3,13 @@
 #include <iostream>
 #include "PLAYER.h"
 #include "String.h"
+#include <vector>
+
 using namespace std;
 int donutamount = 3;
-bool magicactivate = false;
+int magicactivate;
+extern vector<string> Magic;
+
 
 item::item()
 {
@@ -28,7 +32,7 @@ void item::inventoryKey()
         cout << ">> "; cin >> input;
 
         // add door mechanic here
-               // edit: door mechanic was added in map, loser 
+               // edit: door mechanic was added in map file, loser 
 
 	} else cout << "EMPTY" << endl;
 	
@@ -92,25 +96,47 @@ void item::inventoryDonuts()
 
 void item::magicUse()
 {
-    String* MAGIC = new String("fire, ice, water, air");
-    
 
-    char* input;
-    input = new char[12];
 
-    cout << ">> You cast: "; cin >> input; cout << endl;
 
-    String* choice = new String(input);
 
-    choice->Find(*MAGIC);
 
+
+
+
+
+
+
+    //if ((strcmp(input, "fire") == 0)) {
+    //    magicactivate = 1;
+    //    return;
+    //}
+    //if ((strcmp(input, "ice") == 0)) {
+    //    magicactivate = 2;
+    //    return;
+    //}
+    //if ((strcmp(input, "water") == 0)) {
+    //    magicactivate = 3;
+    //    return;
+    //}
+    //if ((strcmp(input, "air") == 0)) {
+    //    magicactivate = 4;
+    //    return;
+    //}
+    //else magicactivate = 5;
 
 }
 
-void item::magic()
-{
+bool knownSpell(const String& spell) {
+    int bottom = 0;
+    int top = size(Magic) - 1;
 
- 
-    magicactivate = true;
-}
+    while (bottom <= top) {
+
+    };
+
+
+
+
+};
 

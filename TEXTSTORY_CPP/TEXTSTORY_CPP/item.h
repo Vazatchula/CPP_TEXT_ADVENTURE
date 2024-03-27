@@ -11,7 +11,7 @@ public:
     void inventoryDonuts();
     void magicUse();
 
-    void magic();
+  
 
 
 

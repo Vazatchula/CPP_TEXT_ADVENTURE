@@ -1,6 +1,6 @@
 #include "PLAYER.h"
 
-
+#include <vector>
 #include <iostream>
 
 #define _CRT_SECURE_NO_WARNINGS
@@ -14,6 +14,8 @@ void enemy(const char* enemy);
 bool ratfight;
 bool playerAlive;
 extern int donutamount;
+extern int magicactivate;
+vector<string> Magic;
 
 player::player(const char* NAME, int HP, int ATTK, int MN)
 {
@@ -38,6 +40,14 @@ player::player(const char* NAME, int HP, int ATTK, int MN)
 	else gameRunning = true;
 	
 	donuts = true;
+
+	Magic.push_back("fire");
+	Magic.push_back("ice");
+	Magic.push_back("water");
+	Magic.push_back("air");
+
+
+
 }
 
 
@@ -306,7 +316,57 @@ void player::enemyRATS()
 		}
 		if ((strcmp(input, "magic") == 0) && (health > 0)) {
 
+			String* MAGIC = new String("fire, ice, water, air");
+
+
+			char* input;
+			input = new char[12];
+
+			cout << ">> You cast: "; cin >> input; cout << endl;
+			
+
+			String* choice = new String(input);
 			magicUse();
+
+
+
+
+
+
+			//switch (magicactivate) {
+
+			//case 1:
+			//	cout << "fire magic" << endl;
+			//	cout << ">> You explode the [CANCEROUS RAT] for " << mana << " DAMAGE." << endl;
+			//	rathealth = rathealth - mana;
+			//	break;
+
+			//case 2:
+			//	cout << "ice magic" << endl;
+			//	cout << ">> You freeze the [CANCEROUS RAT] for " << mana << " DAMAGE." << endl;
+			//	rathealth = rathealth - mana;
+			//	break;
+
+			//case 3:
+			//	cout << "water magic" << endl;
+			//	cout << ">> You drown the [CANCEROUS RAT] for " << mana << " DAMAGE." << endl;
+			//	rathealth = rathealth - mana;
+			//	break;
+
+			//case 4:
+			//	cout << "air magic" << endl;
+			//	cout << ">> You send the [CANCEROUS RAT] flying into the air for " << mana << " DAMAGE." << endl;
+			//	rathealth = rathealth - mana;
+			//	break;
+
+			//case 5:
+			//	cout << "INCORRECT OPTION." << endl;
+			//	magicUse();
+
+			//default:
+			//	cout << "INCORRECT OPTION." << endl;
+			//	magicUse();
+			//}
 
 			/*cout << ">> You cast fireball on the [CANCEROUS RAT] for 60 DAMAGE." << endl;
 			cout << "You take 10 DAMAGE due to the explosion." << endl;
